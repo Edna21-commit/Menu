@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <script>
+            src="https://cdn.jsdelivr.net/npm/chart.js"
+        </script>
+        <title>My first project</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="project.html">Menu</a>
+                <a href="About me.html">About</a>
+                <a href="contact.html">contact</a>
+                <link rel="stylesheet" href="edna.css">
+            </nav>
+        </header>
+        <section>
+            <h2><b>Personal Finance Tracker</b></h2>
+            <div class="container">
+             <div class="summary">
+                <div class="box">
+                    <h3>Total income</h3>
+                    <p>$</p>
+                </div>
+                <div class="box">
+                    <h3>Total expenses</h3>
+                    <p>$</p>
+                </div>
+                <div class="box">
+                    <h3>Balance</h3>
+                    <p>$</p>
+                </div>
+             </div>
+           </div>
+           <p>
+           <div class="container">
+           <div class="sec">
+            <div class="Add Transaction">
+                <h3>Add Transaction</h3>
+
+    <input type="text" placeholder="Description"><br>
+    <input type="number" placeholder="Amount"><br>
+    <select>
+        <option>Category</option>
+        <option>Food</option>
+        <option>utilities</option>
+        <option>salary</option>
+    </select><br>
+    <button>Add Transaction</button>
+</div>
+            </div>
+<div class="spending breakdown">
+    <h3>Spending breakdown</h3>
+    <div class="pie-chart">
+        <!pie-chart>
+        <canvas id="mypiechart" width="400" height="400">
+    <script>
+        const ctx=
+        document.getElementById('mypiechart')
+        new chart(ctx,{
+            type:'pie',
+            data:{
+                labels:['food','transport','bills','others'],
+                datasets:[{
+                    data:[30,20,25,25],
+                    backgroundcolor: ['white', 'blue','magenta','brown']
+                }]
+            },
+        });
+
+    </script>
+        </canvas>
+</div>
+</div>
+           </div>
+        </section>
+            
+<aside>
+    <div class="transaction">
+        <h3>Transaction</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>salary</td>
+                    <td>$</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>groceries</td>
+                    <td>$</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>utilities</td>
+                    <td>$</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>coffee</td>
+                    <td>$</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</aside>
+        
+
+    </body>
+</html>
