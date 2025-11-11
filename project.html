@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width" initial-scale="1.0">
+          <link rel="stylesheet" href="edna.css">
         <script>
             src="https://cdn.jsdelivr.net/npm/chart.js"
         </script>
@@ -10,38 +11,41 @@
     </head>
     <body>
         <header>
+            <button id="themeToggle">Toggletheme</button>
             <nav>
                 <a href="index.html">Home</a>
-                <a href="project.html">Menu</a>
                 <a href="About me.html">About</a>
                 <a href="contact.html">contact</a>
-                <link rel="stylesheet" href="edna.css">
+                <a href="project.html">project1</a>
+                <a href="Menu.html">project2</a>
             </nav>
         </header>
-        <section>
-            <h2><b>Personal Finance Tracker</b></h2>
+            <h2 class="head"><b>Personal Finance Tracker</b></h2>
             <div class="container">
              <div class="summary">
-                <div class="box">
-                    <h3>Total income</h3>
-                    <p>$</p>
-                </div>
-                <div class="box">
-                    <h3>Total expenses</h3>
-                    <p>$</p>
-                </div>
-                <div class="box">
-                    <h3>Balance</h3>
-                    <p>$</p>
-                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Total income</th>
+                            <th>Total expenses</th>
+                            <th>Balance</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td contenteditable="true">$</td>
+                                <td contenteditable="true">$</td>
+                                <td contenteditable="true">$</td>
+                            </tr>
+                        </tbody>
+                </table>
              </div>
            </div>
            <p>
-           <div class="container">
-           <div class="sec">
-            <div class="Add Transaction">
+            <div class="main-content">
+           <div class="container1">
+            <div class="add-transaction">
                 <h3>Add Transaction</h3>
-
     <input type="text" placeholder="Description"><br>
     <input type="number" placeholder="Amount"><br>
     <select>
@@ -52,16 +56,20 @@
     </select><br>
     <button>Add Transaction</button>
 </div>
-            </div>
+</div>
+<div class="container2">
 <div class="spending breakdown">
     <h3>Spending breakdown</h3>
     <div class="pie-chart">
-        <!pie-chart>
         <canvas id="mypiechart" width="400" height="400">
+        </canvas>
+    </div>
+    <script
+    src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         const ctx=
-        document.getElementById('mypiechart')
-        new chart(ctx,{
+        document.getElementById('mypiechart').getContext('2d');
+        new Chart(ctx,{
             type:'pie',
             data:{
                 labels:['food','transport','bills','others'],
@@ -73,13 +81,12 @@
         });
 
     </script>
-        </canvas>
 </div>
 </div>
            </div>
-        </section>
-            
+           </p>        
 <aside>
+    <div class="container">
     <div class="transaction">
         <h3>Transaction</h3>
         <table>
@@ -92,30 +99,31 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>salary</td>
-                    <td>$</td>
-                    <td></td>
+                    <td contenteditable="true">salary</td>
+                    <td contenteditable="true">$</td>
+                    <td contenteditable="true"></td>
                 </tr>
                 <tr>
-                    <td>groceries</td>
-                    <td>$</td>
-                    <td></td>
+                    <td contenteditable="true">groceries</td>
+                    <td contenteditable="true">$</td>
+                    <td contenteditable="true"></td>
                 </tr>
                 <tr>
-                    <td>utilities</td>
-                    <td>$</td>
-                    <td></td>
+                    <td contenteditable="true">utilities</td>
+                    <td contenteditable="true">$</td>
+                    <td contenteditable="true"></td>
                 </tr>
                 <tr>
-                    <td>coffee</td>
-                    <td>$</td>
-                    <td></td>
+                    <td contenteditable="true">coffee</td>
+                    <td contenteditable="true">$</td>
+                    <td contenteditable="true"></td>
                 </tr>
             </tbody>
         </table>
     </div>
+    </div>
 </aside>
         
-
+<script src="edna.js"></script>
     </body>
 </html>

@@ -95,8 +95,37 @@ buttons.forEach(btn=>
     btn.classList.add('active'));
     buttons.classList.add('active');
 }
+
+function showMenu(){
+    const exploreMenuBtn=
+    document.getElementById('exploreMenuBtn');
+    const menus=
+    document.getElementById('menu-buttons');
+        menus.style.display="block";
+        exploreMenuBtn.style.display="none"
+    }
+ function googleTranslateElementInit()  {
+    new google.translate.TranslateElement(
+        {pageLanguage: 'en', includedLanguages: 'en,sw'},
+        'google_translate_element'
+    );
+ } 
+ const scanButton=
+ document.getElementById("scanBtn");
+ const readerDiv=
+ document.getElementById("reader");
+ const resultDiv=
+ document.getElementById("result");
+    scanButton.addEventListener('click',()=>{
+        readerDiv.style.display="block";
+        startScanner();
+    });
+ 
+ startScanner();
+showMenu(); 
 startClock();
 SetupHoverText();
 applyTheme();
 filterMenu('all', 
     document.querySelector('.menu-buttons button'));
+googleTranslateElementInit();

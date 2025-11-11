@@ -7,7 +7,38 @@
         <link rel="stylesheet" href="edna.css">
     </head>
     <body>
-        <h1>Menu</h1>
+          <button id="themeToggle">Toggletheme</button>
+               <nav>
+                <a href="index.html">Home</a>
+                <a href="About me.html">About me</a>
+                <a href="contact.html">contact</a>
+                 <a href="project.html">Project1</a>
+                <a href="Menu.html">Project2</a>
+            </nav>
+        <div id="language-switcher">
+            <button id="en-btn">EN</button>
+            <button id="sw-btn">Sw</button>
+        </div>
+        <div id="google_translate_element" style="display: none;">
+        </div>
+        <div class="floating-icons">
+            <p class="chat-label">Chat with us</p>
+            <a href="https://wa.me/255673284678" target="_blank" class="whatsapp">
+                <img
+                 src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="whatsapp">
+
+            </a>
+            <a href="tel:+255760413998" class="call">
+                <img
+                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/call.svg" alt="call">
+            </a>
+            <a href="mailto:edinangelanija@gmail.com" class="email">
+                <img
+                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email">
+            </a>
+        </div>
+        <button class="intro">Menu</button>
+            
         <div class="menu-buttons">
             <button class="active" onclick="filterMenu('all',this)">All</button>
             <button onclick="filterMenu('food',this)">Foods</button>
@@ -79,6 +110,14 @@ Available on Wednesday, Friday and Saturday,<br>
                 <p>popcorn $2.25</p>
             </div>
         </div>
+        </div>
+        <button id="booking">Book a table here<br>
+        <a href="booking.html"> click here</a>
+        </button>
+   
+        <script
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
         <script src="edna.js"></script>
     </body>
 </html>

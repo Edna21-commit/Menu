@@ -2,31 +2,39 @@
 <html>
     <head>
         <title>Contact Me</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" initial scale="1.0">
+        <link rel="stylesheet" href="edna.css">
     </head>
     <body>
         <header>
+            <button id="themeToggle">Toggletheme</button>
+            </header>
             <nav>
                 <a href="index.html">Home</a>
-                <a href="project.html">Projects</a>
                 <a href="About me.html">About me</a>
                 <a href="contact.html">contact</a>
+                 <a href="project.html">Project1</a>
+                <a href="Menu.html">Project2</a>
             </nav>
-
-        </header>
-        <main>
-            <h2>contact</h2>
+        <main class="about-container">
+            <h1 style="font-size: 80px;">CONTACT</h1>
             <p>Please fill your information below, and contact me</p>
         I would love to hear from you.
+        <div class="container3">
 <form action="contact " method="post" class="contact-form">
     <label for="firstname">firstname</label>
     <input type="text" id="text" name="firstname"required>
     <label for="lastname">lastname</label>
     <input type="text" id="text" name="lastname"required>
     <textarea rows="5" placeholder="Your message" required></textarea>
-    
-    <label for="submit">submit</label>
-    <input type="radio" value="submit"><input type="text">
+    <label for="submit">Submit
+    <input type="radio" id="submit" name="submit">
+    </label>
 </form>
+<div id="movingWord">Let's work together</div>
+</div>
+<p> You can reach me by;</p>
            <ul>
             <li>0760413998-For calls and sending texts</li>
             <li>0628462078-For whatsapp only</li>
@@ -34,6 +42,6 @@
             </ul>
 
         </main>
-
+<script src="edna.js"></script>
     </body>
 </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <title> BOOK A TABLE</title>
+        <link rel="stylesheet" href="edna.css">
+    </head>
+    <body>
+        <h2 >Welcome</h2>
+        <form id="bookingform">
+            <label>Full name
+                <input type="text" id="name" required>
+            </label><br>
+            <label>Phone number
+<input type="text" id="Phone" placeholder="eg.0712345678" required>
+<span class="error" id="phoneError"></span>
+            </label><br>
+            <label>Date
+                <input type="date" id="date" required>
+            </label><br>
+            <label>Time
+                <input type="time" id="time" required>
+            </label><br>
+            <label>Number of Guest
+                 <input type="number" id="number og Guest" required>
+            </label><br>
+            <label> Special request
+                <input type="text" id="Special request">
+            </label><br>
+            <div id="areaselection">
+                <h3>select position area</h3>
+                <div>
+                <button id="indoor">Indoor</button>
+                </div>
+                <div>
+                <button id="outdoor">Outdoor</button>
+                </div>
+                <p id="selected-area">You haven't selected an area yet.</p>
+            </div>
+            <button type="submit">Book now</button>
+        </form>
+             <button id="scanBtn"> Scan to pay</button>
+        <div id="reader" style="display: none; width: 300px;"></div>
+        <p id="result" style="font-weight: bold; color: green;"></p>
+        <script
+        src="https://unpkg.com/html5-qrCode">
+    </script>
+        
+        <script src="booking.js"></script>
+    </body>
+</html>

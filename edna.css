@@ -38,7 +38,7 @@ a:hover{
 }
 .contact-form{
     max-width: 500px;
-    margin: 20px auto;
+    margin:5px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -56,36 +56,60 @@ a:hover{
     margin-bottom: 30px;
 }
 .container{
-    max-width: 900px;
+    width: 900px;
     margin: 0 auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
 }
-.Add Transaction, .Spending breakdown{
-    width: 45%;
+.container1, .container2{
+    width: 40%;
+    margin: 0 auto ;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.main-content{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.sec{
+    display: flex;
+    flex-wrap: wrap;
+}
+.add-transaction, .Spending breakdown{
+    width: 90%;
     border: 1px solid;
     padding: 15px;
     border-radius: 5px;
     background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;   
 }
-.Add Transaction input, .Add Transaction select{
+.add-transaction input, .add-transaction select{
     display: block;
-    width: 100px;
+    width: 100%;
     margin-bottom: 10px;
     padding: 15px;
+    box-sizing: border-box;
 }
-.Add Transaction button{
-    width: 100px;
-    padding: 15px;
+.add-transaction button{
+    width: 100%;
+    padding: 8px;
     background-color: aquamarine;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    box-sizing: border-box;
+    margin-bottom: 10px;
 }
 .transaction table{
-    width: 100px;
+    width: 800px;
     border-collapse: collapse;
 }
 .transaction th, .transaction td{
@@ -96,33 +120,37 @@ a:hover{
 .transaction th{
     background-color: blanchedalmond;
 }
+.summary table{
+    width: 800px;
+    border-collapse: collapse;
+}
+.summary th, .summary td{
+    border: 1px solid;
+    padding: 10px;
+    text-align: left;
+}
+.head{
+    text-align: center;
+}
 .main{
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
 }
-.sec{
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
 .h2{
     text-align: center;
 }
-.movingWord{
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    font-size: 24px;
-    font-weight: bold;
-    animation: moveAround 8s linear infinite alternate;
+@keyframes moveDiagonal{
+    0%{top:0%; left: 0%;}
+    50%{top:70%; left:70%;}
+    100%{top: 0%; left :0%;}
 }
-@keyframes moveAround{
-    0%{top:10%; left: 10%; color: red;}
-    25%{top:10%; left: 80%;  color: orange;}
-    50%{top:70%; left:80%; color:green;}
-    75%{top:70%; left:10%; color:blue;}
-    100%{top: 10%; left :10%; color:purple;}
+#movingWord{
+    animation: moveDiagonal 5s linear infinite;
+    position: absolute;
+    font-size: 50px;
+    overflow: hidden;
+    color: #ff5733;
 }
 .menu-buttons button{
     margin: 0 10px;
@@ -170,4 +198,151 @@ a:hover{
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
+}
+#booking{
+    display: block;
+    margin: 100px auto;
+    padding: 12px 25px;
+    background-color:yellowgreen;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.intro{
+    display: block;
+    margin: 100px auto;
+    padding: 12px 25px;
+    background-color:yellowgreen;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+}
+#bookingform{
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    color: black;
+    font-family: 'poppins';
+}
+#bookingform label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    
+}
+#bookingform input,
+#bookingform textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid black;
+    border-radius: 8px;
+    background: transparent;
+    color:black;
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+}
+#bookingform button{
+    width: 100%;
+    background-color: #ffcc00;
+    color: black;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+}
+.floating-icons{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    z-index: 999;
+    animation: SlideIn 1s ease forwads;
+}
+#language-switcher{
+    position: fixed;
+    top: 40px;
+    right: 20px;
+    background: #fff;
+    border-radius: 50%;
+    padding: 10px;
+}
+.chat-label{
+    background-color: #25D366;
+    color: black;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+@keyframes pulse{
+    0%{transform: scale(1);}
+    50%{transform: scale(1.1);}
+    100%{transform: scale(1);}
+}
+.floating-icons a img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    padding: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+#areaselection{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#myButton{
+    text-align: center;
+    font-size: xx-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+}
+#themeToggle{
+    position: absolute;
+    top: 2px;
+    left: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+nav{
+    background-color: #007bff;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover{
+    text-decoration: underline;
+}
+.container3{
+    margin: 10px;
+    padding: 10px;
+    width: 500px;
+    background-color: bisque;
+    color: black;
+    border-radius: 5px;
+
 }

@@ -5,6 +5,7 @@
 NGELANIJA'S RESTAURANT
         </title>
         <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Our Menu">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://NGELANIJA">
@@ -16,6 +17,8 @@ NGELANIJA'S RESTAURANT
     </head>
     <body>
         <header>
+            <p id="clock"></p>
+            <button id="themeToggle">Toggletheme</button>
             <p>NGELANIJA'S RESTAURANT</p>
         </header>
         <nav>
@@ -29,20 +32,22 @@ NGELANIJA'S RESTAURANT
         <main>
      <b> WELCOME TO NGELANIJA'S RESTAURANT</b> <br>
         </main>
+        <div id="movingWord">Welcome!</div>
 Fill your information below
 <form method="post">
     <label for="first name">First name</label>
     <input type="text" name="first name" id="first name" required><br>
     <label for="surname"> surname</label>
     <input type="text" name="surname" id="surname"><br>
+    <label for="email">email</label>
+    <input type="text" name="email" id="email"><br>
 
 </form>
+<button onclick="alert('make sure you give true information')">click me</button>
 <footer>
     <p>Footer</p>
 </footer>
-<script>
-    
-</script>
 
+<script src="edna.js"></script>
     </body>
 </html>
