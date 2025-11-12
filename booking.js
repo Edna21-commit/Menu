@@ -48,4 +48,16 @@ function selection(){
       indoorBtn.classList.remove('selected ');
     });
 }
+const scanButton=
+ document.getElementById("scanBtn");
+ const readerDiv=
+ document.getElementById("reader");
+ const resultDiv=
+ document.getElementById("result");
+    scanButton.addEventListener('click',()=>{
+        readerDiv.style.display="block";
+        startScanner();
+    });
+ 
+ startScanner();
 formValidation();
